@@ -259,6 +259,7 @@ nav {
         width: 100%;
     }
 }
+
 .nav-links a {
     color: white;
     text-decoration: none;
@@ -273,4 +274,20 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: contain;
 }
