@@ -1,0 +1,261 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: beige;
+    color: #222;
+}
+
+/* Navbar */
+nav {
+    background-color: rgb(241, 102, 102);
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: rgb(117, 64, 225);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* Search */
+.search-box {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-box input {
+    padding: 12px;
+    width: 400px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: rgb(117, 64, 225);
+}
+
+.search-box button {
+    padding: 12px 25px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.2s ease;
+}
+
+.search-box button:hover {
+    opacity: 0.8;
+}
+
+/* Videos Section */
+.videos {
+    padding: 30px;
+}
+
+.videos h2 {
+    margin-bottom: 20px;
+}
+
+/* Video Cards */
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.video-card {
+    padding: 15px;
+    background-color: rgb(171, 107, 107);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.video-card img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.video-card h3 {
+    margin: 12px 0 8px;
+    font-size: 18px;
+}
+
+.video-card p {
+    margin: 5px 0;
+    color: rgb(19, 18, 18);
+}
+
+/* Watch Button */
+.watch-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: opacity 0.2s ease;
+}
+
+.watch-btn:hover {
+    opacity: 0.85;
+}
+
+/* Favorite Button */
+.favorite-btn {
+    padding: 8px 12px;
+    margin-top: 8px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.favorite-btn:hover {
+    opacity: 0.8;
+}
+
+/* Remove Favorite Button */
+.remove-btn {
+    padding: 8px 12px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    opacity: 0.8;
+}
+
+/* Recent Searches */
+.recent-item {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recent-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+
+    .video-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .search-box button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .videos {
+        padding: 20px 15px;
+    }
+
+    .video-container {
+        grid-template-columns: 1fr;
+    }
+
+    .video-card {
+        width: 100%;
+    }
+}
